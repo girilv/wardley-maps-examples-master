@@ -1,0 +1,109 @@
+title LndIC
+component L&DLeader [1.01, 0.45]
+component InformationAboutOpenPositions[0.83, 0.73] label [1.8999999999999986, -19.1]
+component InformationAboutAvailableSkillSets [0.45, 0.13] label [5.85, 11.3]
+component ProjectsToBeExecuted [0.58, 0.89] label [47, -10]
+component RevenueOpportunityFromProjects [0.77, 0.91] label [15, 13]
+
+component ExpertiseLevelOfPeopleToBeStaffed [0.48, 0.89] label [43.9, 18]
+component SkillSetofAvailablePeopleToBeStaffed [0.67, 0.15] label [0.98, 0.54
+component SkillLevelofAvailablePeople [0.24, 0.04] label [24, -30]
+component SkillGapOfAvailablePeopleWRTRequirement [0.90, 0.43] label [10, -22]
+component BudgetAvailableToCloseSkillGap [0.88, 0.85] label [59, -33]
+component TimeAvailabilityfromPeopleToCloseSkillGap [0.16, 0.20] label [3, -37]
+component Mentors [0.04, 0.10]
+
+
+
+
+
+component ClassRoomTraining [0.48, 0.76] label [-49, -24]
+component VirtualInstructorTraining [0.59, 0.77] label [28, -15]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+L&DLeader->InformatinAboutOpenPositions
+
+
+L&DLeader->InformationAboutOpenPositions[0.92, 0.59] label
+InformationAboutOpenPositions[0.92, 0.59] label->InformationAboutOpenPositions[0.92, 0.59] label
+L&DLeader->InformationAboutOpenPositions[0.91, 0.66] label
+InformationAboutOpenPositions[0.91, 0.66] label->InformationAboutOpenPositions[0.91, 0.66] label
+InformationAboutOpenPositions[0.91, 0.66] label->InformationAboutOpenPositions[0.91, 0.66] label
+InformationAboutOpenPositions[0.91, 0.66] label->InformationAboutOpenPositions[0.91, 0.66] label
+L&DLeader->BudgetAvailableToCloseSkillGap
+BudgetAvailableToCloseSkillGap->RevenueOpportunityFromProjects
+RevenueOpportunityFromProjects->ProjectsToBeExecuted
+ProjectsToBeExecuted->ProjectsToBeExecuted
+
+
+InformationAboutOpenPositions[0.91, 0.66] label->ExpertiseLevelOfPeopleToBeStaffed
+L&DLeader->SkillGapOfAvailablePeopleWRTRequirement
+SkillGapOfAvailablePeopleWRTRequirement->SkillSetofAvailablePeopleToBeStaffed
+SkillSetofAvailablePeopleToBeStaffed->InformationAboutAvailableSkillSets
+InformationAboutOpenPositions[0.91, 0.66] label->TurnAroundTimeToStaffing
+InformationAboutAvailableSkillSets->InformationAboutAvailableSkillSets
+InformationAboutAvailableSkillSets->InformationAboutAvailableSkillSets
+InformationAboutAvailableSkillSets->TimeAvailabilityfromPeopleToCloseSkillGap
+InformationAboutAvailableSkillSets->SkillLevelofAvailablePeople
+
+
+PreferredModeofTraining->ClassRoomTraining
+PreferredModeofTraining->VirtualInstructorTraining
+L&DLeader->PreferredModeofTraining
+L&DLeader->InformationAboutOpenPositions[0.85, 0.64] label
+
+InformationAboutOpenPositions[0.85, 0.64] label->ProjectsToBeExecuted
+ProjectsToBeExecuted->ProjectsToBeExecuted
+ProjectsToBeExecuted->ExpertiseLevelOfPeopleToBeStaffed
+component Self Paced Training [0.64, 0.75] label [-23, -48]
+PreferredModeofTraining->Self Paced Training
+component Content [0.26, 0.77] label [5, -10]
+component Trainer [0.46, 0.33]
+
+component Projects [0.30, 0.26]
+component Assessments [0.14, 0.35] label [17, -8]
+component Skill Bundles [0.60, 0.32]
+ClassRoomTraining->Trainer
+VirtualInstructorTraining->Trainer
+Trainer->Trainer
+Trainer->Trainer
+Self Paced Training->Projects
+PreferredModeofTraining->Skill Bundles
+Self Paced Training->Assessments
+ClassRoomTraining->Assessments
+VirtualInstructorTraining->Assessments
+Playgrounds->Content
+Skill Bundles->Self Paced Training
+Trainer->Content
+L&DLeader->MeetPeopleAvailabilityGoalforBusiness
+MeetPeopleAvailabilityGoalforBusiness->ClassRoomTraining
+MeetPeopleAvailabilityGoalforBusiness->VirtualInstructorTraining
+MeetPeopleAvailabilityGoalforBusiness->Skill Bundles
+MeetPeopleAvailabilityGoalforBusiness->MeetPeopleAvailabilityGoalforBusiness
+MeetPeopleAvailabilityGoalforBusiness->Self Paced Training
+L&DLeader->InformationAboutOpenPositions[0.82, 0.64] label
+InformationAboutOpenPositions[0.82, 0.64] label->InformationAboutOpenPositions[0.82, 0.64] label
+InformationAboutOpenPositions[0.82, 0.64] label->InformationAboutOpenPositions[0.82, 0.64] label
+InformationAboutOpenPositions[0.82, 0.64] label->ExpertiseLevelOfPeopleToBeStaffed
+L&DLeader->InformationAboutOpenPositions[0.83, 0.73] label
+component ToMeetPeopleAvailabilityForBusiness [0.80, 0.45] label [8, 9]
+component Playgrounds [0.14, 0.79]
+ToMeetPeopleAvailabilityForBusiness->Self Paced Training
+ToMeetPeopleAvailabilityForBusiness->Skill Bundles
+ToMeetPeopleAvailabilityForBusiness->VirtualInstructorTraining
+ToMeetPeopleAvailabilityForBusiness->ToMeetPeopleAvailabilityForBusiness
+ToMeetPeopleAvailabilityForBusiness->ClassRoomTraining
+InformationAboutOpenPositions[0.83, 0.73] label->ProjectsToBeExecuted
