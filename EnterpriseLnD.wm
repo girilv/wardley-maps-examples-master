@@ -1,3 +1,86 @@
-component LndLeader [0.9, 0.1]
-component DeliveryManager [0.9, 0.1]
-component ToStaffAProject
+title ITServiceLnD
+component LndLeader [0.96, 0.32] label [-16, -10]
+component DeliveryManager [0.97, 0.66] label [-19, -32]
+
+
+component ToStaffAProject [0.85, 0.66] label [12, 26]
+component ListofSkillSetsAndExpertiseLevelsNeeded [0.75, 0.71] label [-2, 19]
+component ShortlistedPeople [0.59, 0.67] label [-10, 12]
+component SkillGapofShortlistedPeople [0.46, 0.66] label [-2, 15]
+component ToDecideHireOrTrain [0.29, 0.66] label [-23, -25]
+
+component WorkwithLnDToTrain [0.18, 0.62] label [-6, 29]
+component WorkwithTalentAcquisition [0.07, 0.84] label [4, -32]
+
+component ProjectsWhichNeedToBeStaffed [0.76, 0.20] label [1, 14]
+component PeopleWhoNeedToGetTrained [0.59, 0.24] label [-49, -18]
+
+component RevenueOpportunity [0.22, 0.83] label [5, -20]
+
+component ToSuccessfullyDeployPeopleInProjects [0.84, 0.25] label [-47, -35]
+
+
+
+
+
+component SolveRealWorldScenarios [0.16, 0.11] label [7, -22]
+
+component ToEnablePeopleToGetCertified [0.78, 0.43] label [2, -19]
+
+
+DeliveryManager->DeliveryManager
+DeliveryManager->ToStaffAProject
+LndLeader->ToSuccessfullyDeployPeopleInProjects
+ToSuccessfullyDeployPeopleInProjects->ToSuccessfullyDeployPeopleInProjects
+ToSuccessfullyDeployPeopleInProjects->ProjectsWhichNeedToBeStaffed
+ProjectsWhichNeedToBeStaffed->ProjectsWhichNeedToBeStaffed
+ProjectsWhichNeedToBeStaffed->ListofPeopleWhoNeedTraining
+ListofPeopleWhoNeedTraining->ListofPeopleWhoNeedTraining
+ListofPeopleWhoNeedTraining->TAT ToStaffProjects
+TAT ToStaffProjects->TAT ToStaffProjects
+TAT ToStaffProjects->ModesOfTraining
+ModesOfTraining->ModesOfTraining
+ModesOfTraining->ModesOfTraining
+ModesOfTraining->ModesOfTraining
+ModesOfTraining->ClassRoom
+ModesOfTraining->SelfPaced
+ClassRoom->Trainer
+Trainer->Trainer
+Trainer->Content
+SelfPaced->Content
+Content->Playgrounds
+Playgrounds->TrainingSpecificScenarioBasedAssessments
+component Capabilities [0.46, 0.29] label [0, 21]
+component Concepts [0.36, 0.17] label [5, -10]
+component AssessmentsonRealWorldScenarios [0.08, 0.27] label [9, 11]
+TAT ToStaffProjects->Capabilities
+Capabilities->Capabilities
+Capabilities->Capabilities
+Capabilities->Capabilities
+Capabilities->Capabilities
+Capabilities->Concepts
+Capabilities->SolveRealWorldScenarios
+Capabilities->Capabilities
+Capabilities->AssessmentsonRealWorldScenarios
+ProjectsWhichNeedToBeStaffed->PeopleWhoNeedToGetTrained
+PeopleWhoNeedToGetTrained->Capabilities
+LndLeader->ToEnablePeopleToGetCertified
+ToEnablePeopleToGetCertified->PeopleWhoNeedToGetTrained
+Capabilities->BudgetAvailableToTrain
+ToStaffAProject->ListofSkillSetsAndExpertiseLevelsNeeded
+ListofSkillSetsAndExpertiseLevelsNeeded->ListofSkillSetsAndExpertiseLevelsNeeded
+component CostPerEmployeeToTrain [0.32, 0.42] label [15, -22]
+Capabilities->Capabilities
+Capabilities->CostPerEmployeeToTrain
+BudgetAvailableToTrain->BudgetAvailableToTrain
+component TrainingBudget [0.24, 0.43] label [5, -10]
+CostPerEmployeeToTrain->TrainingBudget
+ToDecideHireOrTrain->TrainingBudget
+ToDecideHireOrTrain->RevenueOpportunity
+ListofSkillSetsAndExpertiseLevelsNeeded->ShortlistedPeople
+ShortlistedPeople->SkillGapofShortlistedPeople
+SkillGapofShortlistedPeople->SkillGapofShortlistedPeople
+SkillGapofShortlistedPeople->ToDecideHireOrTrain
+ToDecideHireOrTrain->WorkwithLnDToTrain
+WorkwithLnDToTrain->WorkwithLnDToTrain
+WorkwithLnDToTrain->WorkwithLnDToTrain
